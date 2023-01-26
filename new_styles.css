@@ -599,3 +599,69 @@
 .site_form__card-label:last-child {
   margin-bottom: 0;
 }
+
+.site_form__cvv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.site_form__cvv > * {
+  margin-right: 8px;
+}
+
+.site_form__cvv-field {
+  border: 1px solid #ffffff;
+}
+
+.site_form__hint {
+  position: relative;
+}
+
+.site_form__hint-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.site_form__hint-btn:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M10 6H10.01' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9 10H10V14H11' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+
+.site_form__hint-box {
+  width: 269px;
+  color: #000000;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 32px;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+}
+
+.site_form__hint-box > p {
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.site_form__hint-box > p:last-child {
+  margin-bottom: 0;
+}

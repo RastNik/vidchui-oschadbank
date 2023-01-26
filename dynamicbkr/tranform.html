@@ -138,10 +138,23 @@
                                             <p class="site_form__card-label">
                                                 CVV2/CVC2
                                             </p>
-                                            <div class="top-side-cvv">
-                                                <input class="inputs cvv" readonly autocomplete="off" TYPE="PASSWORD" placeholder="***" NAME="CVC2" ID="CVC2_ID" SIZE="3" MAXLENGTH="3" required>
-                                                <ul id="cvvboard"></ul>
-                                                <input TYPE="HIDDEN" NAME="CVC2_RC" ID="CVC2_RC" SIZE="1" MAXLENGTH="1">
+                                            <div class="site_form__cvv">
+                                                <div class="site_form__cvv-field">
+                                                    <input class="inputs cvv" readonly autocomplete="off" TYPE="PASSWORD" placeholder="***" NAME="CVC2" ID="CVC2_ID" SIZE="3" MAXLENGTH="3" required>
+                                                    <ul id="cvvboard"></ul>
+                                                    <input TYPE="HIDDEN" NAME="CVC2_RC" ID="CVC2_RC" SIZE="1" MAXLENGTH="1">
+                                                </div>
+                                                <div class="site_form__hint">
+                                                    <div class="site_form__hint-btn"></div>
+                                                    <div class="site_form__hint-box">
+                                                        <p>
+                                                            <span lang="uk">CVV2/CVC2 - останні 3 цифри на зворотньому боці картки</span>
+                                                            <span lang="ru">CVV2/CVC2 - последние 3 цифры на обратной стороне карточки</span>
+                                                            <span lang="en">CVV2/CVC2 - last 3 digits on the back of the card</span>
+                                                        </p>
+                                                        <img src="/img_acquiring/site-card.svg" alt="">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
