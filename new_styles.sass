@@ -4,6 +4,10 @@ $white: #ffffff
 $blue: #00AEEF
 $pink: #EF5BA1
 
+$media-md: 991px
+$media-sm: 767px
+$media-xs: 480px
+
 @font-face
 	font-family: 'Myriad Pro'
 	src: url('/fonts_acquiring/MyriadPro/MyriadPro-Regular/MyriadPro-Regular.woff2') format('woff2'), url('/fonts_acquiring/MyriadPro/MyriadPro-Regular/MyriadPro-Regular.woff') format('woff')
@@ -31,6 +35,8 @@ $pink: #EF5BA1
 		line-height: 1.2
 		& > *
 			width: 100%
+		a, button
+			-webkit-tap-highlight-color: transparent
 		&-content
 			display: flex
 			flex-direction: column
@@ -50,6 +56,9 @@ $pink: #EF5BA1
 			padding: 95px 16px 100px 16px
 			position: relative
 			overflow: hidden
+			@media screen and ( max-width: $media-md )
+				padding-top: 72px
+				padding-bottom: 74px
 			&:before, &:after
 				content: ""
 				width: 713px
@@ -62,9 +71,20 @@ $pink: #EF5BA1
 			&:before
 				margin-left: -730px
 				top: 33%
+				@media screen and ( max-width: $media-md )
+					margin-left: -430px
+				@media screen and ( max-width: $media-sm )
+					margin-left: -290px
+					top: 40%
 			&:after
 				margin-left: 655px
 				bottom: 22px
+				@media screen and ( max-width: $media-md )
+					margin-left: 420px
+					transform: translate(-50%, 0) scale(-1, -1)
+				@media screen and ( max-width: $media-sm )
+					margin-left: 180px
+					bottom: -23px
 			& > *
 				position: relative
 				z-index: 1
@@ -86,6 +106,8 @@ $pink: #EF5BA1
 			justify-content: center
 			max-width: 120px
 			margin-right: 9px
+			@media screen and ( max-width: $media-sm )
+				max-width: 80px
 			&:last-child
 				margin-right: 0
 			img
@@ -99,6 +121,14 @@ $pink: #EF5BA1
 				margin-right: 3px
 				&:last-child
 					margin-right: 0
+				&.plus
+					@media screen and ( max-width: $media-sm )
+						width: 12px
+						height: 12px
+				&.additional
+					@media screen and ( max-width: $media-sm )
+						width: 47px
+						height: 40px
 	&_header
 		width: 100%
 		background: $white
@@ -117,6 +147,8 @@ $pink: #EF5BA1
 				align-items: center
 				justify-content: center
 				margin-right: 40px
+				@media screen and ( max-width: $media-sm )
+					margin-right: 20px
 				&:last-child
 					margin-right: 0
 	&_footer
@@ -124,10 +156,15 @@ $pink: #EF5BA1
 		background: #1A1919
 		padding: 40px 0
 		position: relative
+		@media screen and ( max-width: $media-sm )
+			padding: 32px 0
 		&-wrap
 			display: flex
 			align-items: flex-start
 			justify-content: space-between
+			@media screen and ( max-width: $media-sm )
+				flex-direction: column
+				justify-content: flex-start
 		&-payments
 			display: flex
 			align-items: center
@@ -136,14 +173,34 @@ $pink: #EF5BA1
 			top: 57px
 			left: 50%
 			transform: translate(-50%, 0)
+			@media screen and ( max-width: $media-md )
+				top: auto
+				bottom: 40px
+			@media screen and ( max-width: $media-sm )
+				top: 32px
+				right: 16px
+				bottom: auto
+				left: auto
+				transform: none
+			@media screen and ( max-width: $media-xs )
+				right: 0
+				transform: scale(.7)
 			& > *
 				margin-right: 56px
+				@media screen and ( max-width: $media-sm )
+					margin-right: 24px
 				&:last-child
 					margin-right: 0
 		&-info
 			display: flex
 			align-items: flex-start
 			justify-content: flex-start
+			position: relative
+			@media screen and ( max-width: $media-sm )
+				justify-content: space-between
+				width: 100%
+				padding-bottom: 22px
+				margin-top: 40px
 			& > p
 				margin-right: 32px
 			& > div
@@ -162,6 +219,8 @@ $pink: #EF5BA1
 				align-items: flex-start
 				justify-content: flex-start
 				margin-bottom: 16px
+				@media screen and ( max-width: $media-sm )
+					margin-bottom: 8px
 				&:last-child
 					margin-bottom: 0
 				& > *
@@ -174,10 +233,20 @@ $pink: #EF5BA1
 				max-width: 178px
 				font-size: 12px
 				line-height: 1.16
+				@media screen and ( max-width: $media-sm )
+					width: 100%
+					max-width: 100%
+					text-align: center
+					position: absolute
+					left: 0
+					bottom: 0
 	&-title
 		font-weight: bold
 		font-size: 50px
 		margin-bottom: 36px
+		@media screen and ( max-width: $media-sm )
+			font-size: 40px
+			margin-bottom: 40px
 		&:last-child
 			margin-bottom: 0
 	&_form
@@ -193,6 +262,8 @@ $pink: #EF5BA1
 			justify-content: flex-start
 			width: 100%
 			margin-bottom: 96px
+			@media screen and ( max-width: $media-sm )
+				margin-bottom: 48px
 			&:last-child
 				margin-bottom: 0
 		&-block
@@ -202,6 +273,8 @@ $pink: #EF5BA1
 			justify-content: flex-start
 			width: 100%
 			margin-bottom: 84px
+			@media screen and ( max-width: $media-sm )
+				margin-bottom: 40px
 			&:last-child
 				margin-bottom: 0
 		&-subtitle
@@ -209,6 +282,10 @@ $pink: #EF5BA1
 			line-height: 1.35
 			text-align: center
 			margin-bottom: 28px
+			@media screen and ( max-width: $media-sm )
+				margin-bottom: 24px
+			@media screen and ( max-width: $media-xs )
+				font-size: 14px
 			&:last-child
 				margin-bottom: 0
 		&-submit
@@ -226,6 +303,10 @@ $pink: #EF5BA1
 			border-radius: 100px
 			background: $pink
 			cursor: pointer
+			@media screen and ( max-width: $media-xs )
+				width: 100%
+				min-height: 58px
+				font-size: 18px
 		&__info
 			display: flex
 			flex-direction: column
@@ -238,6 +319,11 @@ $pink: #EF5BA1
 			box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.4)
 			border-radius: 30px
 			padding: 32px 72px
+			@media screen and ( max-width: $media-sm )
+				font-size: 18px
+				border-radius: 16px
+				padding: 32px 16px
+				padding-left: 24px
 			&-block
 				display: flex
 				align-items: center
@@ -251,11 +337,18 @@ $pink: #EF5BA1
 					border: 1.4px solid $white
 					border-radius: 30px
 					padding: 16px 32px
+					@media screen and ( max-width: $media-sm )
+						width: 195px
+						padding: 16px 24px
 		&__card
 			width: 100%
 			max-width: 499px
 			margin-left: -268px
 			position: relative
+			@media screen and ( max-width: $media-md )
+				margin-left: -220px
+			@media screen and ( max-width: $media-sm )
+				margin-left: 0
 			ul#cvvboard
 				left: 50%
 				transform: translate(-50%, 0)
@@ -271,6 +364,10 @@ $pink: #EF5BA1
 				top: 32px
 				left: 270px
 				z-index: 0
+				@media screen and ( max-width: $media-md )
+					left: 220px
+				@media screen and ( max-width: $media-sm )
+					display: none
 			&-wrap
 				display: flex
 				flex-direction: column
@@ -285,11 +382,16 @@ $pink: #EF5BA1
 				padding: 40px 56px
 				position: relative
 				z-index: 1
+				@media screen and ( max-width: $media-sm )
+					min-height: 294px
+					padding: 32px 16px
 			&-block
 				display: flex
 				align-items: flex-start
 				justify-content: flex-start
 				margin-bottom: 61px
+				@media screen and ( max-width: $media-sm )
+					margin-bottom: 51px
 				&:last-child
 					margin-bottom: 0
 			&-item
@@ -301,10 +403,20 @@ $pink: #EF5BA1
 					position: absolute
 					top: 72px
 					left: 100%
+					@media screen and ( max-width: $media-md )
+						margin-left: 40px
+					@media screen and ( max-width: $media-sm )
+						position: relative
+						top: auto
+						left: auto
+						margin-left: 0
 			&-label
 				font-size: 14px
 				padding-left: 32px
 				margin-bottom: 8px
+				@media screen and ( max-width: $media-sm )
+					margin-bottom: 10px
+					padding-left: 30px
 				&--cvv
 					width: 108px
 					text-align: center
@@ -318,6 +430,8 @@ $pink: #EF5BA1
 				justify-content: space-between
 				padding: 0 40px
 				position: relative
+				@media screen and ( max-width: $media-sm )
+					padding: 0 30px
 				input
 					width: 25%
 					height: 54px
@@ -371,6 +485,8 @@ $pink: #EF5BA1
 				width: 137px
 				height: 54px
 				transition: .3s
+				@media screen and ( max-width: $media-sm )
+					width: 111px
 				&.empty
 					border-color: #F5555B
 				select
@@ -385,7 +501,6 @@ $pink: #EF5BA1
 						border: none !important
 					option
 						color: $black
-						text-align: left
 		&__cvv
 			display: flex
 			align-items: center
@@ -423,6 +538,7 @@ $pink: #EF5BA1
 				width: 32px
 				height: 32px
 				cursor: pointer
+				-webkit-tap-highlight-color: transparent
 				&:hover
 					& + div
 						display: block
@@ -450,6 +566,15 @@ $pink: #EF5BA1
 					bottom: auto
 					top: 100%
 					right: -42px
+				@media screen and ( max-width: $media-sm )
+					width: 190px
+					border-radius: 14px
+					padding: 22px 24px
+					margin-top: 0
+					margin-bottom: 10px
+					top: auto
+					bottom: 100%
+					right: -7px
 				&:after
 					content: ""
 					width: 0
@@ -465,20 +590,33 @@ $pink: #EF5BA1
 						border-color: transparent transparent $white transparent
 						right: 47px
 						bottom: 100%
+					@media screen and ( max-width: $media-sm )
+						border-width: 10px 7.5px 0 7.5px
+						border-color: $white transparent transparent transparent
+						right: 16px
+						bottom: auto
+						top: 100%
 				& > p
 					max-width: 178px
 					font-size: 14px
 					margin-bottom: 23px
+					@media screen and ( max-width: $media-sm )
+						max-width: 126px
+						font-size: 10px
+						margin-bottom: 16px
 					&:last-child
 						margin-bottom: 0
 				& > img
 					margin-top: -40px
+					@media screen and ( max-width: $media-sm )
+						width: 100%
+						height: auto
+						margin-top: -25px
 	&_loading
 		display: block
 		width: 100%
 		height: 100vh
 		background: rgba(255,255,255,.65)
-		background: #000
 		position: fixed
 		top: 0
 		left: 0
@@ -492,32 +630,19 @@ $pink: #EF5BA1
 		&-heart
 			transition: .3s
 		&-line
-			// transition: .3s
-			opacity: 0
-			animation-name: show
-			animation-iteration-count: infinite
-			animation-duration: 1s
+			opacity: 1
+			animation: loader 1.2s infinite ease-in-out
 			&.line-1
-				animation-delay: 1s
-				// animation-timing-function: 1s
-				animation-duration: 1s
+				animation-delay: -1.1s
 			&.line-2
-				animation-delay: 2s
-				// animation-timing-function: 2s
-				animation-duration: 2s
+				animation-delay: -1.0s
 			&.line-3
-				display: none
-				animation-delay: 3s
-				animation-timing-function: 3s
-				animation-duration: 3s
+				animation-delay: -0.9s
 			&.line-4
-				display: none
-				animation-delay: 4s
-				animation-timing-function: 4s
-				animation-duration: 4s
+				animation-delay: -0.8s
 
-@keyframes show
-	0%
+@keyframes loader
+	0%, 40%, 100%
 		opacity: 0
-	100%
+	20%
 		opacity: 1
