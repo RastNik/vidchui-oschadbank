@@ -256,6 +256,10 @@ $pink: #EF5BA1
 			max-width: 499px
 			margin-left: -268px
 			position: relative
+			ul#cvvboard
+				left: 50%
+				transform: translate(-50%, 0)
+				top: 45px
 			&:after
 				content: ""
 				width: 100%
@@ -292,20 +296,124 @@ $pink: #EF5BA1
 				margin-right: 45px
 				&:last-child
 					margin-right: 0
+				&--cvv
+					margin-left: 66px
+					position: absolute
+					top: 72px
+					left: 100%
 			&-label
 				font-size: 14px
 				padding-left: 32px
 				margin-bottom: 8px
+				&--cvv
+					width: 108px
+					text-align: center
+					padding: 0
 				&:last-child
 					margin-bottom: 0
+			&-number
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 0 40px
+				position: relative
+				input
+					width: 25%
+					height: 54px
+					font-size: 18px
+					text-align: center
+					color: $white
+					border: none
+					background: transparent
+					position: relative
+					z-index: 1
+					&::placeholder
+						color: $white
+					&.empty
+						border: none !important
+				.mps
+					margin-top: 8px
+					right: 0
+					top: 100%
+					left: auto
+					&.mpserr
+						font-size: 14px
+						color: $white
+						background: #F26A6F
+						border-radius: 5px
+						padding: 2px 6px
+						right: auto
+						left: 0
+				span.validRes
+					width: 100%
+					max-width: none
+					height: 100%
+					border: 1.4px solid $white
+					border-radius: 30px
+					max-height: none
+					margin: 0
+					top: 0
+					left: 0
+					transition: .3s
+					z-index: 0
+					&.denied
+						border-color: #F5555B
+					&:before, &:after
+						display: none
+			&-select
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 18px
+				border: 1.4px solid $white
+				border-radius: 30px
+				width: 137px
+				height: 54px
+				transition: .3s
+				&.empty
+					border-color: #F5555B
+				select
+					font-size: 18px
+					color: $white
+					text-align: center
+					border: none
+					background: transparent
+					padding: 4px
+					margin: 0
+					&.empty
+						border: none !important
+					option
+						color: $black
+						text-align: left
 		&__cvv
 			display: flex
 			align-items: center
 			justify-content: flex-start
 			& > *
 				margin-right: 8px
+				&:last-child
+					margin-right: 0
 			&-field
-				border: 1px solid $white
+				width: 108px
+				height: 54px
+				position: relative
+				input
+					width: 100%
+					height: 100%
+					font-size: 18px
+					text-align: center
+					color: $white
+					border-radius: 30px
+					border: 1px solid $white
+					background: transparent
+					padding: 0
+					margin: 0
+					transition: .3s
+					&::placeholder
+						color: $white
+					&.empty
+						border-color: #F5555B !important
 		&__hint
 			position: relative
 			&-btn
@@ -334,7 +442,14 @@ $pink: #EF5BA1
 				position: absolute
 				left: 100%
 				bottom: -42px
-				z-index: 1
+				z-index: 999
+				@media screen and ( max-width: 1300px )
+					margin-left: 0
+					margin-top: 15px
+					left: auto
+					bottom: auto
+					top: 100%
+					right: -42px
 				&:after
 					content: ""
 					width: 0
@@ -345,6 +460,11 @@ $pink: #EF5BA1
 					position: absolute
 					right: calc(100% - 1px)
 					bottom: 47px
+					@media screen and ( max-width: 1300px )
+						border-width: 0 11px 14px 11px
+						border-color: transparent transparent $white transparent
+						right: 47px
+						bottom: 100%
 				& > p
 					max-width: 178px
 					font-size: 14px
@@ -353,3 +473,51 @@ $pink: #EF5BA1
 						margin-bottom: 0
 				& > img
 					margin-top: -40px
+	&_loading
+		display: block
+		width: 100%
+		height: 100vh
+		background: rgba(255,255,255,.65)
+		background: #000
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 9999
+		&-wrap
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 100%
+		&-heart
+			transition: .3s
+		&-line
+			// transition: .3s
+			opacity: 0
+			animation-name: show
+			animation-iteration-count: infinite
+			animation-duration: 1s
+			&.line-1
+				animation-delay: 1s
+				// animation-timing-function: 1s
+				animation-duration: 1s
+			&.line-2
+				animation-delay: 2s
+				// animation-timing-function: 2s
+				animation-duration: 2s
+			&.line-3
+				display: none
+				animation-delay: 3s
+				animation-timing-function: 3s
+				animation-duration: 3s
+			&.line-4
+				display: none
+				animation-delay: 4s
+				animation-timing-function: 4s
+				animation-duration: 4s
+
+@keyframes show
+	0%
+		opacity: 0
+	100%
+		opacity: 1
