@@ -1,0 +1,299 @@
+
+$white: #ffffff
+$blue: #00AEEF
+$pink: #EF5BA1
+
+@font-face
+	font-family: 'Myriad Pro'
+	src: url('/fonts_acquiring/MyriadPro/MyriadPro-Regular/MyriadPro-Regular.woff2') format('woff2'), url('/fonts_acquiring/MyriadPro/MyriadPro-Regular/MyriadPro-Regular.woff') format('woff')
+	font-weight: normal
+	font-style: normal
+	font-display: swap
+
+@font-face
+	font-family: 'Myriad Pro'
+	src: url('/fonts_acquiring/MyriadPro/MyriadPro-Bold/MyriadPro-Bold.woff2') format('woff2'), url('/fonts_acquiring/MyriadPro/MyriadPro-Bold/MyriadPro-Bold.woff') format('woff')
+	font-weight: bold
+	font-style: normal
+	font-display: swap
+
+.site
+	&_wrapper
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: space-between
+		min-height: 100vh
+		font-family: 'Myriad Pro'
+		font-weight: normal
+		font-size: 16px
+		line-height: 1.2
+		& > *
+			width: 100%
+		&-content
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			flex-grow: 1
+			& > *
+				width: 100%
+		&-main
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			flex-grow: 1
+			color: $white
+			background: $blue
+			padding: 95px 16px 100px 16px
+			position: relative
+			overflow: hidden
+			&:before, &:after
+				content: ""
+				width: 713px
+				height: 158px
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='713' height='158' viewBox='0 0 713 158' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M65.1969 75.2994C80.4026 72.4955 76.8329 76.0113 93.7713 77.3048C110.71 78.5982 109.202 74.9522 138.73 71.9659C168.257 68.9796 164.462 75.2126 185.784 77.3048C207.098 79.3969 197.628 65.3075 218.119 65.3076C238.61 65.3076 238.956 75.2994 258.962 75.2994C278.967 75.2995 285.257 35.7225 322.115 38.3355C358.972 40.9572 361.043 74.5182 387.72 74.5182C414.397 74.5182 425.92 51.9735 454.685 54.2479C483.45 56.5223 494.696 70.9069 523.461 70.9069C552.226 70.9069 555.25 36.417 589.742 36.417C624.234 36.417 631.035 50.9144 652.895 63.2589C674.763 75.5946 712.357 78.1035 712.357 78.1035C712.357 78.1035 674.763 73.407 652.904 50.2894C631.044 27.1717 624.251 3.02e-06 589.751 0C555.25 -3.02e-06 552.226 64.6305 523.47 64.6305C494.713 64.6305 483.459 37.6758 454.694 33.4134C425.929 29.1597 414.405 71.4017 387.728 71.4017C361.051 71.4017 358.981 8.50741 322.123 3.60261C285.266 -1.31087 278.976 72.8601 258.97 72.8601C238.965 72.8601 238.618 54.135 218.128 54.135C197.637 54.135 207.107 80.5428 185.793 76.619C164.479 72.7038 168.274 61.0278 138.738 66.6184C109.211 72.209 110.727 79.0497 93.78 76.619C76.8416 74.1883 80.4112 67.608 65.2056 72.8601C50.2339 78.0253 50 78.1121 50 78.1121C50 78.1121 50.2339 78.0687 65.2056 75.3081L65.1969 75.2994Z' fill='url(%23paint0_linear_456_986)'/%3e%3cpath d='M15.2055 84.2433C30.4111 89.4953 26.8416 82.9064 43.78 80.4844C60.7184 78.0537 59.2107 84.9031 88.7382 90.4849C118.266 96.0755 114.471 84.3996 135.793 80.4844C157.107 76.5693 147.637 102.968 168.128 102.968C188.619 102.968 188.965 84.2433 208.971 84.2433C228.976 84.2433 235.267 130.357 272.124 125.444C308.981 120.53 311.052 85.7017 337.729 85.7017C364.406 85.7017 375.929 127.944 404.694 123.69C433.459 119.436 444.705 92.4729 473.47 92.4729C502.235 92.4729 505.259 157.103 539.751 157.103C574.243 157.103 581.044 129.932 602.904 106.814C624.764 83.6965 662.357 79 662.357 79C662.357 79 624.764 81.5088 602.904 93.8446C581.044 106.18 574.252 120.686 539.751 120.686C505.25 120.686 502.226 86.1966 473.47 86.1966C444.714 86.1966 433.459 100.581 404.694 102.856C375.929 105.13 364.406 82.5853 337.729 82.5853C311.052 82.5852 308.981 108.047 272.124 110.668C235.267 113.29 228.976 81.8126 208.971 81.8126C188.965 81.8126 188.619 91.8045 168.128 91.8045C147.637 91.8045 157.107 77.7152 135.793 79.8073C114.48 81.8994 118.274 88.1237 88.7382 85.1461C59.2107 82.1598 60.7271 78.5138 43.78 79.8073C26.8416 81.1008 30.4111 84.6166 15.2055 81.8126C0.233887 79.052 0 79.0086 0 79.0086C0 79.0086 0.233887 79.0867 15.2055 84.2607V84.2433Z' fill='url(%23paint1_linear_456_986)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_456_986' x1='9.26116' y1='57.104' x2='285.301' y2='-269.399' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23916BFC'/%3e%3cstop offset='1' stop-color='%2303ACEF'/%3e%3c/linearGradient%3e%3clinearGradient id='paint1_linear_456_986' x1='37.6976' y1='92.8636' x2='288.094' y2='-213.674' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23916BFC'/%3e%3cstop offset='1' stop-color='%2303ACEF'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ")
+				position: absolute
+				left: 50%
+				transform: translate(-50%, 0)
+				z-index: 0
+			&:before
+				margin-left: -730px
+				top: 33%
+			&:after
+				margin-left: 655px
+				bottom: 22px
+			& > *
+				position: relative
+				z-index: 1
+	&_container
+		width: 100%
+		max-width: 1320px
+		padding-left: 20px
+		padding-right: 20px
+		margin-left: auto
+		margin-right: auto
+	&_logo
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		flex-shrink: 0
+		&-main
+			display: flex
+			align-items: center
+			justify-content: center
+			max-width: 120px
+			margin-right: 9px
+			&:last-child
+				margin-right: 0
+			img
+				width: 100%
+				height: auto
+		&-additional
+			display: flex
+			align-items: center
+			justify-content: center
+			& > *
+				margin-right: 3px
+				&:last-child
+					margin-right: 0
+	&_header
+		width: 100%
+		background: $white
+		padding: 20px 0
+		position: relative
+		&-wrap
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&-payments
+			display: flex
+			align-items: center
+			justify-content: center
+			i
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-right: 40px
+				&:last-child
+					margin-right: 0
+	&_footer
+		color: $white
+		background: #1A1919
+		padding: 40px 0
+		position: relative
+		&-wrap
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+		&-payments
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			top: 57px
+			left: 50%
+			transform: translate(-50%, 0)
+			& > *
+				margin-right: 56px
+				&:last-child
+					margin-right: 0
+		&-info
+			display: flex
+			align-items: flex-start
+			justify-content: flex-start
+			& > p
+				margin-right: 32px
+			& > div
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+		&-phones
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			& > div
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+				margin-bottom: 16px
+				&:last-child
+					margin-bottom: 0
+				& > *
+					font-size: 24px
+					color: $white
+					margin-bottom: 8px
+					&:last-child
+						margin-bottom: 0
+			& > p
+				max-width: 178px
+				font-size: 12px
+				line-height: 1.16
+	&-title
+		font-weight: bold
+		font-size: 50px
+		margin-bottom: 36px
+		&:last-child
+			margin-bottom: 0
+	&_form
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		width: 100%
+		&-box
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			width: 100%
+			margin-bottom: 96px
+			&:last-child
+				margin-bottom: 0
+		&-block
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			width: 100%
+			margin-bottom: 84px
+			&:last-child
+				margin-bottom: 0
+		&-subtitle
+			font-size: 18px
+			line-height: 1.35
+			text-align: center
+			margin-bottom: 28px
+			&:last-child
+				margin-bottom: 0
+		&-submit
+			display: flex
+			align-items: center
+			justify-content: center
+			width: auto
+			height: auto
+			min-height: 72px
+			font-size: 20px
+			text-align: center
+			color: $white
+			padding: 16px 54px
+			border: none
+			border-radius: 100px
+			background: $pink
+			cursor: pointer
+		&__info
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			width: 100%
+			max-width: 538px
+			font-size: 20px
+			background: linear-gradient(252.36deg, #00AEEF 0.76%, #9E5CFA 105.09%)
+			box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.4)
+			border-radius: 30px
+			padding: 32px 72px
+			&-block
+				display: flex
+				align-items: center
+				justify-content: space-between
+				width: 100%
+				margin-bottom: 32px
+				&:last-child
+					margin-bottom: 0
+				& > div
+					width: 229px
+					border: 1.4px solid $white
+					border-radius: 30px
+					padding: 16px 32px
+		&__card
+			width: 100%
+			max-width: 499px
+			margin-left: -268px
+			position: relative
+			&:after
+				content: ""
+				width: 100%
+				height: 100%
+				background: linear-gradient(252.36deg, #00AEEF 0.76%, #9E5CFA 105.09%)
+				box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.4)
+				border-radius: 30px
+				position: absolute
+				top: 32px
+				left: 270px
+				z-index: 0
+			&-wrap
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+				width: 100%
+				height: auto
+				min-height: 328px
+				background: linear-gradient(252.36deg, #00AEEF 0.76%, #9E5CFA 105.09%)
+				box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.4)
+				border-radius: 30px
+				padding: 40px 56px
+				position: relative
+				z-index: 1
+			&-block
+				display: flex
+				align-items: flex-start
+				justify-content: flex-start
+				margin-bottom: 61px
+				&:last-child
+					margin-bottom: 0
+			&-item
+				margin-right: 45px
+				&:last-child
+					margin-right: 0
+			&-label
+				font-size: 14px
+				padding-left: 32px
+				margin-bottom: 8px
+				&:last-child
+					margin-bottom: 0

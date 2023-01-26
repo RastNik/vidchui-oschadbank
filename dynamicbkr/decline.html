@@ -1,0 +1,154 @@
+Content-type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата замовлення</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css_acquiring/fonts.css">
+    <link rel="stylesheet" href="/css_acquiring/nice-select.css">
+    <link rel="stylesheet" href="/css_acquiring/style.css">
+   
+</head>
+<body class="page-success page-duplicate">
+    <div class="header">
+        <div class="top-bar">
+            <div class="container">
+                <a href="https://www.oschadbank.ua/ua/" class="logo" target="_blank">
+				<span lang="uk"><img src="/img_acquiring/logo.png" alt=""></span>
+				<span lang="ru"><img src="/img_acquiring/logo.png" alt=""></span>
+				<span lang="en"><img src="/img_acquiring/en_logo.png" alt=""></span>
+				</a>
+            </div>
+        </div>
+        <div class="bot-bar vsoutlogo">
+            <div class="justify container">
+                 <div class="col middle left">
+                    &nbsp;
+                </div>
+                <div class="col middle center">
+                    <div class="page-name">
+                        <span lang="uk">Оплата замовлення</span>
+                        <span lang="ru">Оплата заказа</span>
+                        <span lang="en">Payment of the order</span>
+                    </div>
+                </div>
+                <div class="col middle left">
+                    <select class="lang-switch">
+                        <option value="uk">українська</option>
+                        <option value="ru">русский</option>
+                        <option value="en">english</option> 
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-entry-content">
+            <div class="receipt__wrap table-responsive">
+                <div class="container">
+                    <div class="check-yes"><img src="/img_acquiring/sad-smile.png" alt=""></div>
+                    <h1>
+                        <span lang="uk">Упс, щось пішло не так </span>
+                        <span lang="ru">Упс, что-то пошло не так</span>
+                        <span lang="en">Oops, something went wrong</span>
+                    </h1>
+                    <p class="description">
+                        <span lang="uk">На жаль, оплату відхилено. Будь ласка, зверніться до свого банку або спробуйте <br> здійснити оплату іншою карткою.</span>
+                        <span lang="ru">К сожалению, оплату отклонено. Пожалуйста, обратитесь в свой банк или попробуйте <br> осуществить оплату другой карточкой.</span>
+                        <span lang="en">Sorry, payment declined. Please contact your bank or try <br> to pay with another card.</span>
+                    </p>
+                </div>
+            </div>
+			<div class="wrapper-btn" style="margin-bottom: 150px;">
+				<a href="%41" class="btn btn-back btn-a">
+                    <span lang="uk">Повернутись</span>
+                    <span lang="ru">Вернуться</span>
+                    <span lang="en">Get back</span>
+                </a>
+			</div>
+        
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="justify">
+                <div class="col top left">
+                    <a href="#" class="contact-centr">
+					<span lang="uk">Контакт-центр</span>
+                    <span lang="ru">Контакт-центр</span>
+                    <span lang="en">Contact-centre</span>
+					</a>
+                </div>
+                <div class="col top left">
+                    <a href="tel:+380443630133" class="phone-cont-cent">+38-044-363-01-33</a>
+                </div>
+                <div class="col top left">
+                    <a href="tel:0-800-210-800" class="phone-cont-cent">0-800-210-800</a>
+                    <div class="disclaimer">
+                    <span lang="uk">безкоштовно зі стаціонарних <br>та мобільних телефонів <br>по Україні</span>
+                    <span lang="ru">бесплатно со стационарных<br> и мобильных телефонов<br> с территории Украины</span>
+                    <span lang="en">free of charge from fixed-line<br> and mobile phones<br> on the territory of Ukraine</span>
+                    </div>
+                </div>
+                <div class="col top left vereficat">
+                    <img class="col middle mastercard" src="/img_acquiring/mastercard-securecode.jpg" alt="Mastercard Securecode">
+                    <img class="col middle vbyvisa" src="/img_acquiring/vbyvisa.png" alt="Verification by Visa">
+                </div>
+            </div>
+        </div>
+        <div class="bot-footer">
+            <div class="container">
+                <p>
+                    © 1991-2020 АТ Ощадбанк<br> Ліцензія Національного банку України №148 від 05.10.2011
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/js_acquiring/jquery.min.js"></script>
+<script src="/js_acquiring/jquery.maskedinput.min.js"></script>
+<script src="/js_acquiring/jquery.nice-select.min.js"></script>
+<script src="/js_acquiring/jquery-simple-multi-lang.js"></script>
+<script src="/js_acquiring/jquery.autotab.min.js"></script>
+<script src="/js_acquiring/functions.js"></script>
+	<script>
+
+    function goBack() {
+        window.history.back();
+    }
+	
+	function pageCleaner(){
+		$('body').removeClass('printSelected');
+		$('.printSelection').remove();
+	}
+
+    function conv() {
+
+        var DE10 = '%47';
+        var date = new Date(DE10.replace(/(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/,'$1-$2-$3T$4:$5:$6+00:00'));
+        date = date.toLocaleString();
+        document.getElementById('date').innerHTML = date;
+    }
+    window.onload= conv;
+
+	$(document).on('click','#a_print',function(){
+		var s = $("body").contents().eq(0).text();
+		
+		if(s.indexOf('Content-type: text/html') != -1){
+			$("body").contents().eq(0).remove();
+		}
+		
+		var $_productDesc = $(".receipt__wrap.table-responsive").html();
+		
+		$('body').addClass('printSelected');
+		$('body').append('<div class="printSelection">' + $_productDesc + '</div>');
+		window.print();
+		
+		window.setTimeout(pageCleaner, 0);
+	});
+	
+	</script>
+
+</body>
+</html>

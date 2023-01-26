@@ -1,0 +1,173 @@
+Content-type: text/html; charset=windows-1251
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<title>ОщадБанк завжди поруч</title>
+	<link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
+</head>
+<body>
+
+<script type='text/javascript'>
+
+function setCVCMode(){
+
+  document.getElementById('CVC2_RC').value = '0';
+  if( document.getElementById('CVC2_ID').value.length == 3){
+      document.getElementById('CVC2_RC').value = '1';
+  }else 
+      {  
+         if( document.getElementById('CVC2_ID').value.length !=0) { 
+         alert("Enter 3 digits for CVC!");
+         return false;
+         }
+
+      }
+  return true;
+}
+</script>
+
+
+	<div id="wrapper">
+		<div id="header">
+			<div class="header">
+				<div class="header-holder">
+					<div class="contacts">
+						<div class="contacts-holder">
+							<span>0-800-210-800</span>
+							<strong>Контакт-центр&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+38-044-363-01-33</strong>
+						</div>
+						<em>безкоштовно зі стаціонарних <br />та мобільних телефонів<br> по Україні</em>
+					</div>
+					<h1 class="logo"><a href="#">ОщадБанк завжди поруч</a></h1>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="box">
+				<div class="t">
+					<div class="r">
+						<div class="b">
+							<div class="l">
+								<div class="tr">
+									<div class="br">
+										<div class="bl">
+											<div class="tl">
+												<form class="form" name="AuthForm" onsubmit='return setCVCMode()' ACTION="/cgi-bin/cgi_link" METHOD="POST">
+													<fieldset>
+														<h2>СТОРІНКА АВТОРИЗАЦІЇ</h2>
+														<div class="row">
+															<label for="CARD">Номер картки</label>
+															<span><input type="text" autocomplete="off" id="CARD" NAME="CARD" SIZE="19" MAXLENGTH="19"/></span>
+															<img src="/images/img-1.jpg" height="23" width="60" alt="ico" />
+															<img src="/images/img-2.jpg" height="23" width="51" alt="ico" />
+														</div>
+														<div class="row">
+															<label>Термін дії картки</label>
+															<select name="EXP" size=1>
+																<option          value="01">01 January</option>
+																<option          value="02">02 Febrary</option>
+																<option          value="03">03 March</option>
+																<option          value="04">04 April</option>
+																<option          value="05">05 May</option>
+																<option          value="06">06 June</option>
+																<option          value="07">07 July</option>
+																<option          value="08">08 August</option>
+																<option          value="09">09 September</option>
+																<option          value="10">10 October</option>
+																<option          value="11">11 November</option>
+																<option          value="12">12 December</option>
+															</select>
+															<select name="EXP_YEAR" size=1>
+																<option          value="15">2015</option>
+																<option          value="16">2016</option>
+																<option          value="17">2017</option>
+																<option          value="18">2018</option>
+																<option          value="19">2019</option>
+																<option          value="20">2020</option> 
+                                                                                                                                <option          value="20">2021</option>
+                                                                                                                                <option          value="20">2022</option>
+                                                                                                                                <option          value="20">2023</option>
+                                                                                                                                <option          value="20">2024</option>
+                                                                                                                                <option          value="20">2025</option>
+															</select>
+														</div>
+														<div class="row">
+															<label for="CVC_2ID">CVV2/CVC2</label>
+															<span><input TYPE="PASSWORD" NAME="CVC2" ID="CVC2_ID" SIZE="3" MAXLENGTH="3" /></span>
+															<input TYPE="HIDDEN" NAME="CVC2_RC" ID="CVC2_RC" SIZE="1" MAXLENGTH="1"></input>
+														</div>
+														<div class="row">
+															<label for="AMOUNT">Сума покупки/послуги</label>
+															<span><input TYPE="TEXT" readonly NAME="AMOUNT" VALUE="%25"/></span>
+														</div>
+														<div class="row">
+															<label for="id-4">Валюта</label>
+															<span><input TYPE="TEXT" readonly NAME="CURRENCY" VALUE="%26"/></span>
+														</div>
+														<div class="row">
+															<label for="id-5">Номер замовлення</label>
+															<span><input TYPE="TEXT" readonly NAME="ORDER" VALUE="%27" /></span>
+														</div>
+<!-- 														<div class="row">
+															<label for="id-7">Електронна адреса</label>
+															<span><input type="text" id="id-7" /></span>
+														</div> -->
+														
+														<input type="HIDDEN" NAME="EMAIL" VALUE="%37"></input>
+														<!-- input TYPE="HIDDEN" NAME="TRTYPE" VALUE="1"></input -->
+														<input TYPE="HIDDEN" NAME="TRTYPE" VALUE="%22"></input>
+														<input TYPE="HIDDEN" NAME="DESC" VALUE="%58">
+														<input TYPE="HIDDEN" NAME="COUNTRY" VALUE="%54"></input>
+														<input TYPE="HIDDEN" NAME="MERCH_GMT" VALUE="%56"></input>
+														<input TYPE="HIDDEN" NAME="TIMESTAMP" VALUE="%47"></input>
+														<input TYPE="HIDDEN" NAME="NONCE" VALUE="%61"></input>
+														<input TYPE="HIDDEN" NAME="BACKREF" VALUE="%41"></input>
+														<input TYPE="HIDDEN" NAME="MERCH_URL" VALUE="%55"></input>						
+														<input TYPE="HIDDEN" NAME="P_SIGN" VALUE="%44"></input>
+														<input TYPE="HIDDEN" NAME="MERCHANT" VALUE="%29"></input>
+														<input TYPE="HIDDEN" NAME="TERMINAL" VALUE="%21"></input>
+														<input TYPE="HIDDEN" NAME="FORM_ID" VALUE="%65"></input>														
+															
+														<div class="row">
+															<label for="id-6">Отримувач</label>
+															<span><input type="TEXT" readonly NAME="MERCH_NAME" VALUE="%53" id="id-6"/></span>
+														</div>
+														<div class="row">
+															<label>&nbsp;</label>
+															<input type="submit" value="" NAME="SEND_BUTTON" class="btn-form" />
+															<!-- <a href="#"><em>Відмінити</em></a> -->
+														</div>
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer">
+				<div class="footer-holder">
+					<div class="footer-area">
+						<div class="footer-inner">
+							<div class="holder">
+							</div> 
+							<div class="area">
+								<span class="copy">&copy; 1991-2013 АО <a href="http://www.oschadnybank.com">Ощадбанк</a></span>
+								<span>Лiцензiя Нацiонального банку Украiни № 148 вiд 05.10.2011p.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

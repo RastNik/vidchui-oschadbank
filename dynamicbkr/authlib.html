@@ -1,0 +1,74 @@
+Content-type: text/html
+
+<center>
+<hr WIDTH="100%">
+</center>
+<center>
+<font size=4>
+<p>
+<BLOCKQUOTE>                                                                                                                            
+<FONT SIZE=+1>
+Please use your PINpad to swipe your card and enter PIN
+</p>
+<p>
+Press "Proceed" button when you have finished
+</FONT>                                                                                                                        
+</BLOCKQUOTE>
+</p>
+</font>
+</center>
+<center>
+<hr WIDTH="100%">
+</center>
+<form ACTION="/cgi-bin/cgi_link" METHOD="POST">
+<table COLS=2 WIDTH="100%" >
+
+<tr>
+<td>
+<div align=right>Transaction amount:</div>
+</td>
+<td>
+<div align=left>%25</div>
+<input TYPE="HIDDEN" NAME="AMOUNT" VALUE="%25"></input>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>Transaction currency:</div>
+</td>
+<td>
+<div align=left>%7</div>
+<input TYPE="HIDDEN" NAME="CURRENCY" VALUE="%6"></input>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<br>
+<input TYPE="HIDDEN" NAME="TRTYPE" VALUE="1"></input>
+<input TYPE="HIDDEN" NAME="CODE" VALUE="%39"></input>
+<input TYPE="HIDDEN" NAME="TERMINAL" VALUE="%21"></input>
+<input TYPE="HIDDEN" NAME="PINPAD" VALUE="%33"></input>
+<input TYPE="HIDDEN" NAME="PAYMENT" VALUE="%40"></input>
+<input TYPE="HIDDEN" NAME="PAYMENT_TO" VALUE="%62"></input>
+<input TYPE="SUBMIT" VALUE="Proceed" NAME="SEND_BUTTON"></input>
+</td>
+</tr>
+</table>
+<OBJECT TYPE="application/x-openway-authlib"
+        CLASSID="clsid:56E1CFBC-16E0-43c3-B8AF-42DA1F3A0865"
+        WIDTH=200 HEIGHT=20>
+<PARAM  name="AUTH_URL" value="/cgi-bin/auth_srv">
+<PARAM  name="SID" value="%39">
+
+<EMBED  TYPE="application/x-openway-authlib"
+        HIDDEN="TRUE" 
+        WIDTH=200 HEIGHT=20
+        AUTH_URL="/cgi-bin/auth_srv" 
+        SID="%39">
+</OBJECT>
+<br>&nbsp;
+</body>
+</html>
