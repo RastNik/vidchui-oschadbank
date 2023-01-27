@@ -98,7 +98,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(../img_acquiring/arrow-select.png) 90% center no-repeat, #ffffff;
+  background: url(../img_vidchui/arrow-select.png) 90% center no-repeat, #ffffff;
 }
 body {
   background: #fff;
@@ -447,9 +447,9 @@ ul#cvvboard li {
     height: 20px;
 }
 
-.page-entry-content .wrapper-btn .form-action .btn-save:before {background: url("../img_acquiring/download-solid.svg");}
-.page-entry-content .wrapper-btn .form-action .btn-print:before {background: url("../img_acquiring/print-solid.svg");}
-.page-entry-content .wrapper-btn .form-action .btn-sendmail:before {background: url("../img_acquiring/mail-bulk-solid.svg");}
+.page-entry-content .wrapper-btn .form-action .btn-save:before {background: url("../img_vidchui/download-solid.svg");}
+.page-entry-content .wrapper-btn .form-action .btn-print:before {background: url("../img_vidchui/print-solid.svg");}
+.page-entry-content .wrapper-btn .form-action .btn-sendmail:before {background: url("../img_vidchui/mail-bulk-solid.svg");}
 
 .modal .modal-title {
     text-align: center;

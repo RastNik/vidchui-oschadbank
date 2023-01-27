@@ -6,26 +6,27 @@ Content-type: text/html; charset=utf-8
     <meta charset="UTF-8">
     <title>Оплата замовлення</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/css_acquiring/fonts.css">
-    <link rel="stylesheet" href="/css_acquiring/modal.css">
-    <link rel="stylesheet" href="/css_acquiring/nice-select.css">
-    <link rel="stylesheet" href="/css_acquiring/style.css">
+    <link rel="stylesheet" href="/css_vidchui/fonts.css">
+    <link rel="stylesheet" href="/css_vidchui/modal.css">
+    <link rel="stylesheet" href="/css_vidchui/nice-select.css">
+    <link rel="stylesheet" href="/css_vidchui/style.css">
+   
 </head>
-<body class="page-success">
+<body class="page-success page-duplicate">
     <div class="header">
         <div class="top-bar">
             <div class="container">
                 <a href="https://www.oschadbank.ua/ua/" class="logo" target="_blank">
-				<span lang="uk"><img src="/img_acquiring/logo.png" alt=""></span>
-				<span lang="ru"><img src="/img_acquiring/logo.png" alt=""></span>
-				<span lang="en"><img src="/img_acquiring/en_logo.png" alt=""></span>
+				<span lang="uk"><img src="/img_vidchui/logo.png" alt=""></span>
+				<span lang="ru"><img src="/img_vidchui/logo.png" alt=""></span>
+				<span lang="en"><img src="/img_vidchui/en_logo.png" alt=""></span>
 				</a>
             </div>
         </div>
         <div class="bot-bar vsoutlogo">
             <div class="justify container">
                  <div class="col middle left">
-                    &nbsp;
+                    &nbsp;&nbsp;
                 </div>
                 <div class="col middle center">
                     <div class="page-name">
@@ -47,13 +48,13 @@ Content-type: text/html; charset=utf-8
     <div class="page-entry-content">
             <div class="receipt__wrap table-responsive">
                 <div class="container">
-                    <div class="check-yes"><img src="/img_acquiring/check-img.png" alt=""></div>
+                    <div class="check-yes"><img src="/img_vidchui/not-check-img.png" alt=""></div>
                     <h1>
-                        <span lang="uk">Вітаємо, ви здійснили оплату</span>
-                        <span lang="ru">Поздравляем, вы совершили оплату</span>
-                        <span lang="en">Congratulations, you made a payment</span>
+                        <span lang="uk">Ви вже здійснили оплату за цією операцією</span>
+                        <span lang="ru">Вы уже осуществили оплату за этой операцией</span>
+                        <span lang="en">You have already paid for this operation</span>
                     </h1>
-                     <p class="description">
+                    <p class="description">
                         <span lang="uk">Деталі:</span>
                         <span lang="ru">Подробности:</span>
                         <span lang="en">Details:</span>
@@ -61,10 +62,10 @@ Content-type: text/html; charset=utf-8
                 </div>
                 <div class="wrapper-deco">
                     <table class="receipt">
-                        <tr class="row-receipt">
+                       <tr class="row-receipt">
                             <td class="align-item-n-l">
                                 <span lang="uk">Номер картки</span>
-                                <span lang="ru">Номер карты</span>
+                                <span lang="ru">Номер карточки</span>
                                 <span lang="en">Card number</span>
                             </td>
                             <td class="align-item-n-r">%12</td>
@@ -121,7 +122,7 @@ Content-type: text/html; charset=utf-8
                 </div>
             </div>
 			<div class="wrapper-btn">
-				<a href="%41" class="btn btn-back btn-a">
+                <a href="%41" class="btn btn-back btn-a">
                     <span lang="uk">Повернутись</span>
                     <span lang="ru">Вернуться</span>
                     <span lang="en">Get back</span>
@@ -140,7 +141,7 @@ Content-type: text/html; charset=utf-8
                     <input type="HIDDEN" readonly NAME="OPSTATUS" VALUE="Виконано успішно">
                     <input type="hidden" readonly NAME="AUTHCODE" VALUE="%4">
                     <input type="hidden" readonly NAME="MERCH_NAME" VALUE="%53" id="id-6">
-                    <input type="hidden" id="CARD" NAME="CARD" SIZE="19" value="%12" MAXLENGTH="19">
+                    <input type="hidden" NAME="CARD" SIZE="19" value="%12" MAXLENGTH="19">
                     <button type="submit" name="save" class="btn-save">
                         <span lang="uk">зберегти</span>
                         <span lang="ru">сохранить</span>
@@ -152,7 +153,7 @@ Content-type: text/html; charset=utf-8
                         <span lang="en">print</span>
                     </button>
                 </form>
-			</div>
+            </div>
     </div>
     <div class="footer">
         <div class="container">
@@ -176,8 +177,8 @@ Content-type: text/html; charset=utf-8
                     </div>
                 </div>
                 <div class="col top left vereficat">
-                    <img class="col middle mastercard" src="/img_acquiring/mastercard-securecode.jpg" alt="Mastercard Securecode">
-                    <img class="col middle vbyvisa" src="/img_acquiring/vbyvisa.png" alt="Verification by Visa">
+                    <img class="col middle mastercard" src="/img_vidchui/mastercard-securecode.jpg" alt="Mastercard Securecode">
+                    <img class="col middle vbyvisa" src="/img_vidchui/vbyvisa.png" alt="Verification by Visa">
                 </div>
             </div>
         </div>
@@ -213,8 +214,8 @@ Content-type: text/html; charset=utf-8
                         <input type="HIDDEN" readonly NAME="OPSTATUS" VALUE="Виконано успішно">
                         <input type="hidden" readonly NAME="AUTHCODE" VALUE="%4">
                         <input type="hidden" readonly NAME="MERCH_NAME" VALUE="%53">
-                        <input type="hidden" readonly NAME="CARD" SIZE="19" value="%12" MAXLENGTH="19">
-                        <input type="email" required name="email" class="mail-popup" placeholder="E-mail">
+                        <input type="hidden" NAME="CARD" SIZE="19" value="%12" MAXLENGTH="19">
+                        <input type="email" name="email" class="mail-popup" placeholder="E-mail">
                         <button type="submit" name="send" class="btn-sendmail btn">
                             <span lang="uk">надіслати</span>
                             <span lang="ru">отправить</span>
@@ -232,83 +233,84 @@ Content-type: text/html; charset=utf-8
             </div>
         </div>
     </div>
-    <script src="/js_acquiring/jquery.min.js"></script>
-    <script src="/js_acquiring/modal.js"></script>
-    <script src="/js_acquiring/jquery.maskedinput.min.js"></script>
-    <script src="/js_acquiring/jquery.nice-select.min.js"></script>
-    <script src="/js_acquiring/jquery-simple-multi-lang.js"></script>
-    <script src="/js_acquiring/jquery.autotab.min.js"></script>
-    <script src="/js_acquiring/functions.js"></script>
-    <script>
+    <script src="/js_vidchui/jquery.min.js"></script>
+    <script src="/js_vidchui/modal.js"></script>
+    <script src="/js_vidchui/jquery.maskedinput.min.js"></script>
+    <script src="/js_vidchui/jquery.nice-select.min.js"></script>
+    <script src="/js_vidchui/jquery.autotab.min.js"></script>
+    <script src="/js_vidchui/jquery-simple-multi-lang.js"></script>
+    <script src="/js_vidchui/functions.js"></script>
+	<script>
 
-        function goBack() {
-            window.history.back();
+    function goBack() {
+        window.history.back();
+    }
+	
+	function pageCleaner(){
+		$('body').removeClass('printSelected');
+		$('.printSelection').remove();
+	}
+
+    function conv() {
+
+        var DE10 = '%47';
+        var date = new Date(DE10.replace(/(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/,'$1-$2-$3T$4:$5:$6+00:00'));
+        date = date.toLocaleString();
+        document.getElementById('date').innerHTML = date;
+        document.getElementById('date2').value = date;
+        document.getElementById('date3').value = date;
+    }
+    window.onload= conv;
+
+	// $(document).on('click','#a_print',function(){
+	// 	var s = $("body").contents().eq(0).text();
+	//
+	// 	if(s.indexOf('Content-type: text/html') != -1){
+	// 		$("body").contents().eq(0).remove();
+	// 	}
+	//
+	// 	var $_productDesc = $(".receipt__wrap.table-responsive").html();
+	//
+	// 	$('body').addClass('printSelected');
+	// 	$('body').append('<div class="printSelection">' + $_productDesc + '</div>');
+	// 	window.print();
+	//
+	// 	window.setTimeout(pageCleaner, 0);
+	// });
+
+    function validateEmail(email) {
+        let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    $(".form-popup button[type='submit']").click(function(e) {
+        e.preventDefault();
+        let email = $('.form-popup .mail-popup').val();
+        if (validateEmail(email)) {
+            let formData = $(this).closest('form').serialize();
+            let btnName = $(this).attr("name");
+            formData = "?" + formData + "&" + btnName + "=";
+            $.ajax({
+                type: 'GET',
+                url:  "../savedownload.php",
+                data: formData,
+                success: function () {
+                    $(".modal-body form").slideUp();
+                    setTimeout(function () {
+                        $(".modal-body .hidden-popup-message").slideDown();
+                    }, 1000);
+                }
+            });
+        } else {
+            $(".mail-popup").addClass("error");
+            return false;
         }
+    });
+    jQuery(".form-action").submit(function() {
+        jQuery(this).attr('target', '_blank');
+        return true;
+    });
 
-        function pageCleaner(){
-            $('body').removeClass('printSelected');
-            $('.printSelection').remove();
-        }
-
-        function conv() {
-
-            var DE10 = '%47';
-            var date = new Date(DE10.replace(/(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)/,'$1-$2-$3T$4:$5:$6+00:00'));
-            date = date.toLocaleString();
-            document.getElementById('date').innerHTML = date;
-            document.getElementById('date2').value = date;
-            document.getElementById('date3').value = date;
-        }
-        window.onload= conv;
-
-        // $(document).on('click','#a_print',function(){
-        // 	var s = $("body").contents().eq(0).text();
-        //
-        // 	if(s.indexOf('Content-type: text/html') != -1){
-        // 		$("body").contents().eq(0).remove();
-        // 	}
-        //
-        // 	var $_productDesc = $(".receipt__wrap.table-responsive").html();
-        //
-        // 	$('body').addClass('printSelected');
-        // 	$('body').append('<div class="printSelection">' + $_productDesc + '</div>');
-        // 	window.print();
-        //
-        // 	window.setTimeout(pageCleaner, 0);
-        // });
-
-        function validateEmail(email) {
-            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
-        }
-
-        $(".form-popup button[type='submit']").click(function(e) {
-            e.preventDefault();
-            let email = $('.form-popup .mail-popup').val();
-            if (validateEmail(email)) {
-                let formData = $(this).closest('form').serialize();
-                let btnName = $(this).attr("name");
-                formData = "?" + formData + "&" + btnName + "=";
-                $.ajax({
-                    type: 'GET',
-                    url:  "../savedownload.php",
-                    data: formData,
-                    success: function () {
-                        $(".modal-body form").slideUp();
-                        setTimeout(function () {
-                            $(".modal-body .hidden-popup-message").slideDown();
-                        }, 1000);
-                    }
-                });
-            } else {
-                $(".mail-popup").addClass("error");
-                return false;
-            }
-        });
-        jQuery(".form-action").submit(function() {
-            jQuery(this).attr('target', '_blank');
-            return true;
-        });
     </script>
 
 </body>

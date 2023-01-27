@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'FuturaPTBook';
+  src: url('../fonts_vidchui/FuturaPTBook.eot');
+  src: url('../fonts_vidchui/FuturaPTBook.eot') format('embedded-opentype'), url('../fonts_vidchui/FuturaPTBook.woff2') format('woff2'), url('../fonts_vidchui/FuturaPTBook.woff') format('woff'), url('../fonts_vidchui/FuturaPTBook.ttf') format('truetype'), url('../fonts_vidchui/FuturaPTBook.svg#FuturaPTBook') format('svg');
+}
+@font-face {
+  font-family: 'FuturaPT-Heavy';
+  src: url('../fonts_vidchui/FuturaPT-Heavy.eot');
+  src: url('../fonts_vidchui/FuturaPT-Heavy.eot') format('embedded-opentype'), url('../fonts_vidchui/FuturaPT-Heavy.woff') format('woff'), url('../fonts_vidchui/FuturaPT-Heavy.ttf') format('truetype'), url('../fonts_vidchui/FuturaPT-Heavy.svg') format('svg');
+}
+@font-face {
+  font-family: 'FuturaPTMedium';
+  src: url('../fonts_vidchui/FuturaPTMedium.eot');
+  src: url('../fonts_vidchui/FuturaPTMedium.eot') format('embedded-opentype'), url('../fonts_vidchui/FuturaPTMedium.woff2') format('woff2'), url('../fonts_vidchui/FuturaPTMedium.woff') format('woff'), url('../fonts_vidchui/FuturaPTMedium.ttf') format('truetype'), url('../fonts_vidchui/FuturaPTMedium.svg#FuturaPTMedium') format('svg');
+}

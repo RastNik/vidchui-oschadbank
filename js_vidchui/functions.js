@@ -220,15 +220,15 @@ $(document).ready(function () {
 		//console.log(str);
 		if(str.length>0){
 			if(str[0]==2 || str[0]==5 || str[0]==6){
-				$(cls).eq(0).before('<span class="mps"><span class="master-label"><img src="/img_acquiring/master.png"></span></span>');
+				$(cls).eq(0).before('<span class="mps"><span class="master-label"><img src="/img_vidchui/master.png"></span></span>');
 				$('.btn_submit').removeClass('disabled-step');
 			}
 			else if(str[0]==4){
-				$(cls).eq(0).before('<span class="mps"><span class="visa-label"><img src="/img_acquiring/visa.png"></span></span>');
+				$(cls).eq(0).before('<span class="mps"><span class="visa-label"><img src="/img_vidchui/visa.png"></span></span>');
 				$('.btn_submit').removeClass('disabled-step');
 			}
 			else if(str[0]==9){
-				$(cls).eq(0).before('<span class="mps"><span class="prostir-label"><img src="/img_acquiring/prostir.png"></span></span>');
+				$(cls).eq(0).before('<span class="mps"><span class="prostir-label"><img src="/img_vidchui/prostir.png"></span></span>');
 				if(str.length>=4 && (str.substring(0,4)!='9804')){
 					$('.mps').remove();
 					$(cls).eq(0).before('<span class="mps mpserr">Система не знайдена, перевірте номер картки</span>');
