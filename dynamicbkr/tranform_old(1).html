@@ -1,0 +1,257 @@
+Content-type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата замовлення</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css_acquiring/fonts.css">
+    <link rel="stylesheet" href="/css_acquiring/nice-select.css">
+    <link rel="stylesheet" href="/css_acquiring/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <div class="container">
+                <a href="https://www.oschadbank.ua/ua/" class="logo" target="_blank">
+				<span lang="uk"><img src="/img_acquiring/logo.png" alt=""></span>
+				<span lang="ru"><img src="/img_acquiring/logo.png" alt=""></span>
+				<span lang="en"><img src="/img_acquiring/en_logo.png" alt=""></span>
+				</a>
+            </div>
+        </div>
+        <div class="bot-bar vsoutlogo">
+            <div class="justify container">
+                 <div class="col middle left">
+                    &nbsp;
+                </div>
+                <div class="col middle center">
+                    <div class="page-name">
+                        <span lang="uk">Оплата замовлення</span>
+                        <span lang="ru">Оплата заказа</span>
+                        <span lang="en">Payment details</span>
+                    </div>
+                </div>
+                <div class="col middle left">
+                    <select class="lang-switch">
+                        <option value="uk">українська</option>
+                        <option value="ru">русский</option>
+                        <option value="en">english</option> 
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="card-form" action="" method="POST">
+        <div class="pay-info">
+            <div class="container">
+                <div class="row center">
+                    <div class="col middle right">
+                        <span lang="uk">Отримувач</span>
+                        <span lang="ru">Получатель</span>
+                        <span lang="en">Merchant</span>
+                    </div>
+                    <div class="col middle left">
+                        %53
+                    </div>
+                </div
+                ><div class="row center">
+                    <div class="col middle right">
+                        <span lang="uk">Номер замовлення</span>
+                        <span lang="ru">Номер заказа</span>
+                        <span lang="en">Order number</span>
+                    </div>
+                    <div class="col middle left">
+                        %27
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col middle right">
+                        <span lang="uk">Сума до оплати</span>
+                        <span lang="ru">Сумма к оплате</span>
+                        <span lang="en">Amount</span>
+                    </div>
+                    <div class="col middle left">
+                        %25 %26
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col middle right">
+                        <span lang="uk">Призначення платежу</span>
+                        <span lang="ru">Назначение платежа</span>
+                        <span lang="en">Purpose of payment</span>
+                    </div>
+                    <div class="col middle left">
+                        %58
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title-wrap">
+                <p class="description">
+                    <span lang="uk">Введіть реквізити платіжної картки</span>
+                    <span lang="ru">Введите реквизиты платежной карточки</span>
+                    <span lang="en">Enter payment card details</span>:
+                </p>
+            </div>
+            <div class="wrapper-card">
+                <div class="card-block">
+                    <div class="card-title">
+                        <span lang="uk">Номер картки</span>
+                        <span lang="ru">Номер карты</span>
+                        <span lang="en">Card number</span>
+                    </div>
+                    <div class="pan-box js-card justify">
+                        <input id="pan-input-1" pattern="[0-9]{4}" name="pan-input-1" class="pan-input auto-tab inputs card_number" placeholder="XXXX" type="number" autocomplete="off" maxlength="4" required autofocus>
+                        <input id="pan-input-2" pattern="[0-9]{4}" name="pan-input-2" class="pan-input auto-tab inputs card_number" placeholder="XXXX" type="number" autocomplete="off" maxlength="4" required disabled>
+                        <input id="pan-input-3" pattern="[0-9]{4}" name="pan-input-3" class="pan-input auto-tab inputs card_number" placeholder="XXXX" type="number" autocomplete="off" maxlength="4" required disabled>
+                        <input id="pan-input-4" pattern="[0-9]{4}" name="pan-input-4" class="pan-input auto-tab inputs card_number" placeholder="XXXX" type="number" autocomplete="off" maxlength="4" required disabled>
+                        <span class="validRes"></span>
+                    </div>
+                    <div class="card-title ">
+                        <span lang="uk">Термін дії <span>(місяць/рік)</span></span>
+                        <span lang="ru">Срок действия <span>(мeсяц/год)</span></span>
+                        <span lang="en">Validity <span>(month/year)</span></span>
+                    </div>
+                    <div class="select-wrap">
+                        <div class=" ">
+                            <select name="EXP" size="1" autocomplete="off" required>
+                                <option value="0">MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+           
+                            <span class="slash">/</span>
+                            <select name="EXP_YEAR" size="1" autocomplete="off" required>
+                                <option value="0">YY</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option> 
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block-second">                
+                    <div class="input-cvv-code">
+                        <div class="top-side-cvv">
+                            <input class="inputs cvv" readonly autocomplete="off" TYPE="PASSWORD" placeholder="***" NAME="CVC2" ID="CVC2_ID" SIZE="3" MAXLENGTH="3" required>
+                            <ul id="cvvboard"></ul>
+                            <input TYPE="HIDDEN" NAME="CVC2_RC" ID="CVC2_RC" SIZE="1" MAXLENGTH="1">
+                        </div>
+                        <div class="bot-side-cvv">
+                            <div class="card-title">
+                                CVV2/CVC2
+                            </div>
+                            <p class="card-title">
+                                <span lang="uk">код</span>
+                                <span lang="ru">код</span>
+                                <span lang="en">code</span>
+                            </p>
+                            <div class="hint">
+                                <span>?</span>
+                                <div class="hint__content">
+                                    <span lang="uk">Останні 3 цифри на звороті картки</span>
+                                    <span lang="ru">Последние 3 цифры на обратной стороне карточки</span>
+                                    <span lang="en">Last 3 digits on the back of the card</span>
+                                    <img src="/img_acquiring/card.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-end align-item">
+                    <button class="btn_submit" type="submit">
+                        <span lang="uk">хочу оплатити</span>
+                        <span lang="ru">хочу оплатить</span>
+                        <span lang="en">confirm payment</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden">
+            <input TYPE="hidden" readonly NAME="ORDER" VALUE="%27">
+            <input TYPE="hidden" readonly NAME="AMOUNT" VALUE="%25">
+            <input TYPE="hidden" readonly NAME="CURRENCY" VALUE="%26">
+            <input type="hidden" readonly NAME="EMAIL" VALUE="%37">
+            <input type="HIDDEN" readonly NAME="TRTYPE" VALUE="%22">
+            <input type="hidden" readonly NAME="DESC" VALUE="%58">
+            <input type="HIDDEN" readonly NAME="COUNTRY" VALUE="%54">
+            <input TYPE="HIDDEN" readonly NAME="MERCH_GMT" VALUE="%56">
+            <input TYPE="HIDDEN" readonly NAME="TIMESTAMP" VALUE="%47">
+            <input type="HIDDEN" readonly NAME="NONCE" VALUE="%61">
+            <input type="hidden" readonly NAME="BACKREF" VALUE="%41">
+            <input type="hidden" readonly NAME="MERCH_URL" VALUE="%55">
+            <input type="hidden" readonly NAME="P_SIGN" VALUE="%44">
+            <input type="hidden" readonly NAME="MERCHANT" VALUE="%29">
+            <input type="hidden" readonly NAME="TERMINAL" VALUE="%21">
+            <input type="hidden" readonly NAME="FORM_ID" VALUE="%65">
+            <input type="hidden" readonly NAME="MERCH_NAME" VALUE="%53" id="id-6">
+            <input type="hidden" id="CARD" NAME="CARD" SIZE="19" value="" MAXLENGTH="19">
+        </div>
+    </form>
+
+    <div class="footer">
+        <div class="container">
+            <div class="justify">
+                <div class="col top left">
+                    <a href="#" class="contact-centr">
+					<span lang="uk">Контакт-центр</span>
+                    <span lang="ru">Контакт-центр</span>
+                    <span lang="en">Contact-centre</span>
+					</a>
+                </div>
+                <div class="col top left">
+                    <a href="tel:+380443630133" class="phone-cont-cent">+38-044-363-01-33</a>
+                </div>
+                <div class="col top left">
+                    <a href="tel:0-800-210-800" class="phone-cont-cent">0-800-210-800</a>
+                    <div class="disclaimer">
+                    <span lang="uk">безкоштовно зі стаціонарних <br>та мобільних телефонів <br>по Україні</span>
+                    <span lang="ru">бесплатно со стационарных<br> и мобильных телефонов<br> с территории Украины</span>
+                    <span lang="en">free of charge from fixed-line<br> and mobile phones<br> on the territory of Ukraine</span>
+                    </div>
+                </div>
+                <div class="col top left vereficat">
+                    <img class="col middle mastercard" src="/img_acquiring/mastercard-securecode.jpg" alt="Mastercard Securecode">
+                    <img class="col middle vbyvisa" src="/img_acquiring/vbyvisa.png" alt="Verification by Visa">
+                </div>
+            </div>
+        </div>
+        <div class="bot-footer">
+            <div class="container">
+                <p>
+                    © 1991-2020 АТ Ощадбанк<br> Ліцензія Національного банку України №148 від 05.10.2011
+                </p>
+            </div>
+        </div>
+    </div>
+
+<script src="/js_acquiring/jquery.min.js"></script>
+<script src="/js_acquiring/jquery.nice-select.min.js"></script>
+<script src="/js_acquiring/jquery-simple-multi-lang.js"></script>
+<script src="/js_acquiring/jquery.maskedinput.min.js"></script>
+<script src="/js_acquiring/jquery.autotab.min.js"></script>
+<script src="/js_acquiring/functions.js"></script>
+</body>
+</html>

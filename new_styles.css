@@ -14,6 +14,16 @@
   font-display: swap;
 }
 
+::-moz-selection {
+  color: #ffffff;
+  background-color: #00AEEF;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #00AEEF;
+}
+
 .site_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
