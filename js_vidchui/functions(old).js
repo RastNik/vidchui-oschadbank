@@ -1,34 +1,30 @@
 $(document).ready(function () {
 
-	$('.maskCard').mask("9999    9999    9999    9999", {placeholder: "XXXX    XXXX    XXXX    XXXX"});
-	// $('.maskCard').mask("9999999999999999", {placeholder: "XXXX    XXXX    XXXX    XXXX"});
-
     // $('.card_number').cardInput();
-   //  $(".inputs").on("keyup change input", function (e) {
-   //  	var reg = new RegExp('^[0-9]+$');
-   //  	console.log(reg.test(this.value));
-   //  	if (!reg.test(this.value)) {
-   //  		$(this).val("");
-   //  	} else {
-   //          if (this.value.length == this.maxLength) {
-	//             var $next = $(this).next('.inputs');
-	//             if ($next.length)
-	//                 $(this).next('.inputs').focus();
-	//             else
-	//                 $(this).blur();
-	//         }
-   //      }
-   //  });
+    $(".inputs").on("keyup change input", function (e) {
+    	var reg = new RegExp('^[0-9]+$');
+    	console.log(reg.test(this.value));
+    	if (!reg.test(this.value)) {
+    		$(this).val("");
+    	} else {
+            if (this.value.length == this.maxLength) {
+	            var $next = $(this).next('.inputs');
+	            if ($next.length)
+	                $(this).next('.inputs').focus();
+	            else
+	                $(this).blur();
+	        }
+        }
+    });
 
-   //  $.autotab({ tabOnSelect: true });
-   //  $('.auto-tab').autotab('filter', 'number');
-	// $('#pan-input-1').on("input blur", function() {
-	// 	$(".inputs").attr("disabled",false);
-	// })
+    $.autotab({ tabOnSelect: true });
+    $('.auto-tab').autotab('filter', 'number');
+	$('#pan-input-1').on("input blur", function() {
+		$(".inputs").attr("disabled",false);
+	})
 	$('.js-card input').on('change blur', function () {
 		//create full card numbers and remove parts(pan-input-, ...)
-		// var fullcard = $('.js-card input[name="pan-input-1"]').val() + $('.js-card input[name="pan-input-2"]').val() + $('.js-card input[name="pan-input-3"]').val() + $('.js-card input[name="pan-input-4"]').val();
-		var fullcard = $('.js-card input[name="pan-input-1"]').val().replace(/ /g,'');
+		var fullcard = $('.js-card input[name="pan-input-1"]').val() + $('.js-card input[name="pan-input-2"]').val() + $('.js-card input[name="pan-input-3"]').val() + $('.js-card input[name="pan-input-4"]').val();
 		$('input[name="CARD"]').prop("value", ''+fullcard+'');
 		// console.log($('input[name="CARD"]').val());
 	});
@@ -49,16 +45,17 @@ $(document).ready(function () {
 
 		if($(".mpserr").length>0){
 			$(".mpserr").next().focus();
-			$('.card_number').siblings(".validRes").removeClass("denied");
+			$('.card_number').addClass("empty");
 			e.preventDefault;
 		}
 		
 		strc1='';
 		$('.card_number').each(function(){
-			strc1+=$(this).val().replace(/ /g,'');
+			strc1+=$(this).val();
 		});
+		// console.log(strc1.length);
 		if(strc1.length!=16){
-			$('.card_number').siblings(".validRes").addClass("denied");
+			$('.card_number').addClass("empty");
 			$('.card_number').eq(0).focus();
 			e.preventDefault;
 		}
@@ -105,7 +102,7 @@ $(document).ready(function () {
 		}
 
 		$('form').on('submit', function () {
-			$('.js-card input[name="pan-input-1"]').removeAttr("name");
+			$('.js-card input[name="pan-input-1"], .js-card input[name="pan-input-2"], .js-card input[name="pan-input-3"], .js-card input[name="pan-input-4"]').removeAttr("name");
 		});
 	});
 
@@ -175,11 +172,10 @@ $(document).ready(function () {
 
 	$('.card_number').on("keyup change input", function(){
 		cls=($(this).hasClass('card_number'))?'.card_number': false;
-		let cardVal = $(this).val().replace(/ /g,'');
-		// if($(this).val().length==4)
-		// 	$(this).next().attr("disabled",false);
+		if($(this).val().length==4)
+			$(this).next().attr("disabled",false);
 		validCardNum(cls);
-		if(cardVal.length<=15) {
+		if($(this).val().length<=3) {
 			$("span.validRes").removeClass("denied success-alt");
 		}
 	});
@@ -200,15 +196,15 @@ $(document).ready(function () {
 						(key >= 48 && key <= 57) ||
 						(key >= 96 && key <= 105));
 				});
-				// $(this).keyup(function(e)
-				// {	var key = e.charCode || e.keyCode || 0;
-				// 	if(key==8 && $(this).val().length==0){
-				// 		$(this).prev().focus();
-				// 	}else{
-				// 		if($(this).val().length>=4)
-				// 			$(this).next().focus();
-				// 	}
-				// });
+				$(this).keyup(function(e)
+				{	var key = e.charCode || e.keyCode || 0;
+					if(key==8 && $(this).val().length==0){
+						$(this).prev().focus();
+					}else{
+						if($(this).val().length>=4)
+							$(this).next().focus();
+					}
+				});
 			});
 		}
 	})(jQuery);
@@ -217,10 +213,11 @@ $(document).ready(function () {
 		$(cls).parent().find('.mps').remove();
 		str='';
 		$(cls).each(function(e){
-			str+=$(this).val().replace(/ /g,'');
+			str+=$(this).val();
 		});
 		if(str.length==16)
 			validCardNumLuna(str,cls);
+		//console.log(str);
 		if(str.length>0){
 			if(str[0]==2 || str[0]==5 || str[0]==6){
 				$(cls).eq(0).before('<span class="mps"><span class="master-label"><img src="/img_vidchui/master.png"></span></span>');

@@ -393,6 +393,7 @@ $media-xs: 480px
 				display: flex
 				align-items: flex-start
 				justify-content: flex-start
+				width: 100%
 				margin-bottom: 61px
 				@media screen and ( max-width: $media-sm )
 					margin-bottom: 51px
@@ -400,6 +401,8 @@ $media-xs: 480px
 					margin-bottom: 0
 			&-item
 				margin-right: 45px
+				&--fullwidth
+					width: 100%
 				&:last-child
 					margin-right: 0
 				&--cvv
@@ -436,6 +439,9 @@ $media-xs: 480px
 				position: relative
 				@media screen and ( max-width: $media-sm )
 					padding: 0 30px
+				&.for_one
+					input
+						width: 100%
 				input
 					width: 25%
 					height: 54px

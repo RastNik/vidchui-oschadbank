@@ -826,6 +826,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
   margin-bottom: 61px;
 }
 
@@ -841,6 +842,10 @@
 
 .site_form__card-item {
   margin-right: 45px;
+}
+
+.site_form__card-item--fullwidth {
+  width: 100%;
 }
 
 .site_form__card-item:last-child {
@@ -913,6 +918,10 @@
   }
 }
 
+.site_form__card-number.for_one input {
+  width: 100%;
+}
+
 .site_form__card-number input {
   width: 25%;
   height: 54px;
@@ -943,6 +952,10 @@
 
 .site_form__card-number input.empty {
   border: none !important;
+}
+
+.site_form__card-number input.align-left {
+  text-align: left;
 }
 
 .site_form__card-number .mps {
